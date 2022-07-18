@@ -11,6 +11,19 @@ provider "aws" {
   region = var.region
 }
 
+variable "region" {
+  type = string
+  default = "us-east-1"
+}
+
+variable "name" {
+  type = string
+}
+
+variable "prefix" {
+  type = string
+}
+
 module "s3-webapp" {
   source  = "careful-pigeon.tf-support.hashicorpdemo.com/careful-pigeon/s3-webapp/aws"
   name   = var.name
