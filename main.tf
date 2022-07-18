@@ -31,3 +31,7 @@ module "s3-webapp" {
   prefix = var.prefix
   version = "1.0.0"
 }
+  
+output "website_endpoint" {
+  value = module.s3-webapp.endpoint
+}
